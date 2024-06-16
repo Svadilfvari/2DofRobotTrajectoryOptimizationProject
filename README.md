@@ -53,12 +53,12 @@ $$\[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix
 
 This results in the following system (III):
 
-\[
+$$\[
 \begin{cases}
 H_{11} * Δθ_1 + H_{12} * Δθ_2 + g_1 = 0 \\
 H_{21} * Δθ_1 + H_{22} * Δθ_2 + g_1 = 0
 \end{cases}
-\]
+\]$$
 
 Here, the unknown is \( Δθ = (Δθ_1, Δθ_2) \). Therefore, we use the `root` method on this system to solve it.
 
