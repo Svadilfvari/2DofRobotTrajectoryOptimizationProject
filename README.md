@@ -30,11 +30,11 @@ $$\[\begin{cases}l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) = p_x \\ l_1
 
 The residual is a function of two input variables $(\theta_1\)$ and $(\theta_2\)$ and two outputs (II):
 
-$$\[\begin{cases}
+$$\begin{cases}
 l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) - p_x = 0 \\
 l_1 \sin(\theta_1) + l_2 \sin(\theta_1 + \theta_2) - p_y = 0
 \end{cases}
-\]$$
+$$
 
 Our objective is to implement optimization methods to find solutions to system (II), i.e., values of \(\theta_1\) and \(\theta_2\) that satisfy (II). This is defined in the file `System.py` where we use the `root` method from `scipy`.
 
@@ -56,12 +56,12 @@ $$\[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix
 
 This results in the following system (III):
 
-$$\[
+$$
 \begin{cases}
 H_{11} * Δθ_1 + H_{12} * Δθ_2 + g_1 = 0 \\
 H_{21} * Δθ_1 + H_{22} * Δθ_2 + g_1 = 0
 \end{cases}
-\]$$
+$$
 
 Here, the unknown is \( Δθ = (Δθ_1, Δθ_2) \). Therefore, we use the `root` method on this system to solve it.
 
