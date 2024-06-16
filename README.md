@@ -1,5 +1,3 @@
-
-
 # Two-Armed Robot Optimization Project
 
 ## The Problem
@@ -49,17 +47,13 @@ Our objective is to implement optimization methods to find solutions to system (
 
 We use the `optimize` method from `scipy` to find the minimum of the cost function, which in our case is the squared norm of the residual (cf. system II). This gives the following equation:
 
-\[
-||R(\theta)||² = (l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) - p_x)² + (l_1 \sin(\theta_1) + l_2 \sin(\theta_1 + \theta_2) - p_y)²
-\]
+$$\[||R(\theta)||² = (l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) - p_x)² + (l_1 \sin(\theta_1) + l_2 \sin(\theta_1 + \theta_2) - p_y)²\]$$
 
 #### Third Method: Newton's Method
 
 To apply Newton's method, we need to solve:
 
-\[
-H[J(X_n)] * ΔX = - ∇[J(X_n)]
-\]
+$$\[H[J(X_n)] * ΔX = - ∇[J(X_n)]\]$$
 
 In our case, \( X_n \) corresponds to \(\theta\) and \( J \) corresponds to \( R \). Thus, we have:
 
