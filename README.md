@@ -26,12 +26,8 @@ Refer to the UML diagram below for a detailed class structure.
 #### First Method: Root Finding
 
 The geometric model is governed by the system (I):
-$$
-\[\begin{cases}
-l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) = p_x \\
-l_1 \sin(\theta_1) + l_2 \sin(\theta_1 + \theta_2) = p_y
-\end{cases}\]
-$$
+$$\[\begin{cases}l_1 \cos(\theta_1) + l_2 \cos(\theta_1 + \theta_2) = p_x \\ l_1 \sin(\theta_1) + l_2 \sin(\theta_1 + \theta_2) = p_y\end{cases}\]$$
+
 The residual is a function of two input variables (\(\theta_1\) and \(\theta_2\)) and two outputs (II):
 
 \[
