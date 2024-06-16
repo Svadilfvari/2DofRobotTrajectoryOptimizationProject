@@ -53,22 +53,7 @@ $$\[H[J(X_n)] * ΔX = - ∇[J(X_n)]\]$$
 
 In our case, \( X_n \) corresponds to \(\theta\) and \( J \) corresponds to \( R \). Thus, we have:
 
-\[ 
-\begin{pmatrix}
-H_{11} & H_{12} \\
-H_{21} & H_{22}
-\end{pmatrix}
-*
-\begin{pmatrix}
-Δθ_1 \\
-Δθ_2
-\end{pmatrix}
-= -
-\begin{pmatrix}
-g_1 \\
-g_2
-\end{pmatrix}
-\]
+$$\[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix}Δθ_1 \\Δθ_2\end{bmatrix}= -\begin{bmatrix}g_1 \\g_2\end{bmatrix}\]$$
 
 This results in the following system (III):
 
