@@ -6,7 +6,7 @@ The goal of this project is to implement optimization methods to reduce the resi
 
 ## Results
 
-A GUI has been added to display the different solutions. This GUI is modular, allowing users to choose the size of the robot arm, the trajectory, and the number of solutions to be displayed.
+Multiple methods have been implemented and the results are displayed in on GUI. This GUI has been added to display the different solutions. This GUI is modular, allowing users to choose the size of the robot arm, the trajectory, and the number of solutions to be displayed.
 
 
 ![Solution Visualization](https://github.com/Svadilfvari/2DofRobotTrajectoryOptimizationProject/blob/main/2Dof_Robot_Arm_GUI.gif)
