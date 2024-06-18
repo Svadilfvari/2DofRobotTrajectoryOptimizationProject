@@ -30,7 +30,7 @@ $$\begin{cases}l_1 \cos(θ_1) + l_2 \cos(θ_1 + θ_2) = p_x \\ l_1 \sin(θ_1) + 
 
 The residual is a function of two input variables $θ_1$ and $θ_2$ and two outputs (II):
 
-$$\begin{cases}l_1 \cos(\θ_1) + l_2 \cos(\θ_1 + \θ_2) - p_x = 0 \\ l_1 \sin(\θ_1) + l_2 \sin(\θ_1 + \θ_2) - p_y = 0\end{cases}$$
+$$\begin{cases}l_1 \cos(θ_1) + l_2 \cos(θ_1 + θ_2) - p_x = 0 \\ l_1 \sin(θ_1) + l_2 \sin(θ_1 + θ_2) - p_y = 0\end{cases}$$
 
 Our objective is to implement optimization methods to find solutions to system (II), i.e., values of $θ_1$ and $θ_2$ that satisfy (II). This is defined in the file `System.py` where we use the `root` method from `scipy`.
 
@@ -38,7 +38,7 @@ Our objective is to implement optimization methods to find solutions to system (
 
 We use the `optimize` method from `scipy` to find the minimum of the cost function, which in our case is the squared norm of the residual (cf. system II). This gives the following equation:
 
-$$||R(\θ)||² = (l_1 \cos(\θ_1) + l_2 \cos(\θ_1 + \θ_2) - p_x)² + (l_1 \sin(\θ_1) + l_2 \sin(\θ_1 + \θ_2) - p_y)²$$
+$$||R(θ)||² = (l_1 \cos(θ_1) + l_2 \cos(θ_1 + θ_2) - p_x)² + (l_1 \sin(θ_1) + l_2 \sin(θ_1 + θ_2) - p_y)²$$
 
 #### Third Method: Newton's Method
 
@@ -59,7 +59,7 @@ H_{21} * Δθ_1 + H_{22} * Δθ_2 + g_1 = 0
 \end{cases}
 $$
 
-Here, the unknown is $$( Δθ = (Δθ_1, Δθ_2) $$. Therefore, we use the `root` method on this system to solve it.
+Here, the unknown is $$ Δθ = (Δθ_1, Δθ_2) $$. Therefore, we use the `root` method on this system to solve it.
 
 #### Jacobian and Hessian Matrices
 
