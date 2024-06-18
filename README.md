@@ -2,7 +2,7 @@
 
 ## The Problem
 
-The goal of this project is to implement optimization methods to reduce the residual $$ R(\θ) $$ resulting from inaccuracies in the inverse geometric model of a two-joint robotic arm.
+The goal of this project is to implement optimization methods to reduce the residual $$R(θ)$$ resulting from inaccuracies in the inverse geometric model of a two-joint robotic arm.
 
 ## Results
 
@@ -26,15 +26,11 @@ Refer to the UML diagram below for a detailed class structure.
 #### First Method: Root Finding
 
 The geometric model is governed by the system (I):
-$$\begin{cases}l_1 \cos(\θ_1) + l_2 \cos(\θ_1 + \θ_2) = p_x \\ l_1 \sin(\θ_1) + l_2 \sin(\θ_1 + \θ_2) = p_y\end{cases}$$
+$$\begin{cases}l_1 \cos(θ_1) + l_2 \cos(θ_1 + θ_2) = p_x \\ l_1 \sin(θ_1) + l_2 \sin(θ_1 + θ_2) = p_y\end{cases}$$
 
-The residual is a function of two input variables $$θ_1$$ and $$θ_2$$ and two outputs (II):
+The residual is a function of two input variables $θ_1$ and $θ_2$ and two outputs (II):
 
-$$\begin{cases}
-l_1 \cos(\θ_1) + l_2 \cos(\θ_1 + \θ_2) - p_x = 0 \\
-l_1 \sin(\θ_1) + l_2 \sin(\θ_1 + \θ_2) - p_y = 0
-\end{cases}
-$$
+$$\begin{cases}l_1 \cos(\θ_1) + l_2 \cos(\θ_1 + \θ_2) - p_x = 0 \\ l_1 \sin(\θ_1) + l_2 \sin(\θ_1 + \θ_2) - p_y = 0\end{cases}$$
 
 Our objective is to implement optimization methods to find solutions to system (II), i.e., values of $θ_1$ and $θ_2$ that satisfy (II). This is defined in the file `System.py` where we use the `root` method from `scipy`.
 
@@ -52,7 +48,7 @@ $$H[J(X_n)] * ΔX = - ∇[J(X_n)]$$
 
 In our case, $$ X_n $$ corresponds to $$θ$$ and $$ J$$ corresponds to $$ R $$. Thus, we have:
 
-$$\[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix}Δθ_1 \\Δθ_2\end{bmatrix}= -\begin{bmatrix}g_1 \\g_2\end{bmatrix}\]$$
+$$[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix}Δθ_1 \\Δθ_2\end{bmatrix}= -\begin{bmatrix}g_1 \\g_2\end{bmatrix}$$
 
 This results in the following system (III):
 
@@ -68,10 +64,11 @@ Here, the unknown is $$( Δθ = (Δθ_1, Δθ_2) $$. Therefore, we use the `root
 #### Jacobian and Hessian Matrices
 
 The Jacobian and Hessian matrices are written as follows:
-$$∇(||R(θ)||²) = \begin{bmatrix}
-2(-l_1 \sin θ_1 - l_2 \sin (θ_1 + θ_2))(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + 2(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_y) \\
+$$∇(||R(θ)||²) = \begin{bmatrix} 2(-l_1 \sin θ_1 - l_2 \sin (θ_1 + θ_2))(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + 2(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_y) \\
 2l_2(-\sin (θ_1 + θ_2)(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + \cos (θ_1 + θ_2)(l_1 \sin θ_1 + l_2 \sin (θ_1 + θ_2) - p_y))
 \end{bmatrix}$$
+
+
 
 $$H(||R(θ)||²) = \begin{bmatrix}
 2 p_x (l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2)) \\
