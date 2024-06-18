@@ -47,7 +47,7 @@ To apply Newton's method, we need to solve:
 
 $$H[J(X_n)] * ΔX = - ∇[J(X_n)]$$
 
-In our case, $$ X_n $$ corresponds to $$θ$$ and $$ J$$ corresponds to $$ R $$. Thus, we have:
+In our case, $X_n$ corresponds to $θ$ and $J$ corresponds to $R$. Thus, we have:
 
 $$[\begin{bmatrix}H_{11} & H_{12} \\H_{21} & H_{22}\end{bmatrix}*\begin{bmatrix}Δθ_1 \\Δθ_2\end{bmatrix}= -\begin{bmatrix}g_1 \\g_2\end{bmatrix}$$
 
