@@ -59,7 +59,7 @@ H_{21} * Δθ_1 + H_{22} * Δθ_2 + g_1 = 0
 \end{cases}
 $$
 
-Here, the unknown is $$ Δθ = (Δθ_1, Δθ_2) $$. Therefore, we use the `root` method on this system to solve it.
+Here, the unknown is $$Δθ = (Δθ_1, Δθ_2)$$. Therefore, we use the `root` method on this system to solve it.
 
 #### Jacobian and Hessian Matrices
 
