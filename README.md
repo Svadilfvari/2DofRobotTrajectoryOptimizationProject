@@ -72,7 +72,8 @@ Here, the unknown is $Δθ = (Δθ_1, Δθ_2)$. Therefore, we use the `root` met
 
 The Jacobian and Hessian matrices are written as follows:
 
-$$∇(||R(θ)||²) = \begin{bmatrix} 2(-l_1 \sin θ_1 - l_2 \sin (θ_1 + θ_2))(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + 2(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_y) \\2l_2(-\sin (θ_1 + θ_2)(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + \cos (θ_1 + θ_2)(l_1 \sin θ_1 + l_2 \sin (θ_1 + θ_2) - p_y))\end{bmatrix}$$
+$$∇(||R(θ)||²) = \begin{bmatrix} 2(-l_1 \sin θ_1 - l_2 \sin (θ_1 + θ_2))(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + 2(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_y) \\
+2l_2(-\sin (θ_1 + θ_2)(l_1 \cos θ_1 + l_2 \cos (θ_1 + θ_2) - p_x) + \cos (θ_1 + θ_2)(l_1 \sin θ_1 + l_2 \sin (θ_1 + θ_2) - p_y))\end{bmatrix}$$
 
 
 
